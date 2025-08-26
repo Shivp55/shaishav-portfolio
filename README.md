@@ -1,52 +1,33 @@
 
-# Shaishav Parekh — Portfolio
+# Shaishav Parekh — Portfolio (3D)
 
-A single‑page portfolio built with React + Vite + Tailwind.
+Vite + React + Tailwind + Three.js (@react-three/fiber) portfolio.
 
-## Local setup
+## Local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## One‑click free deployment options
+## Deploy (free)
 
-### Option A — Netlify (fastest)
+### Netlify
+- Build: `npm run build`
+- Publish: `dist`
+- SPA redirects: `netlify.toml`
 
-1. Create a free account at https://app.netlify.com/ (GitHub login works).
-2. Click **Add new site → Import an existing project**.
-3. Connect your GitHub repo and select this project.
-4. Build command: `npm run build`  •  Publish directory: `dist`
-5. Netlify will auto‑deploy on every push to `main`.
+### Vercel
+- Framework: Vite (auto)
+- Build: `npm run build`
+- Output: `dist`
+- SPA rewrites: `vercel.json`
 
-> SPA routing is handled by `netlify.toml`.
+### GitHub Pages
+- Push to a repo and enable **Pages → Source: GitHub Actions**.
+- Workflow at `.github/workflows/deploy.yml` builds and publishes `dist`.
+- `vite.config.js` sets `base` automatically on Actions so assets resolve.
 
-### Option B — Vercel (also easy)
-
-1. Go to https://vercel.com/new and import your GitHub repo.
-2. Framework preset: **Vite** (auto‑detected).
-3. Build command: `npm run build`  •  Output: `dist`
-4. Deploy. Every push redeploys automatically.
-
-> SPA routing is handled by `vercel.json`.
-
-### Option C — GitHub Pages (free, no external service)
-
-This repo includes a GitHub Action at `.github/workflows/deploy.yml`.
-Just push to `main` and Pages will deploy automatically.
-
-**Steps**
-
-1. Create a new repo on GitHub and push this project (or upload the ZIP).
-2. Go to **Settings → Pages** and set **Source: GitHub Actions**.
-3. Push a commit to `main`. The workflow builds and publishes `dist`.
-
-The `vite.config.js` automatically sets a correct `base` when building on GitHub Actions, so asset paths will work on `https://<username>.github.io/<repo>/`.
-
-## Customizing
-
-- Update your social links in `src/App.jsx` (`DATA.socials`).
-- Add project links in `DATA.projects` to show buttons.
-- Colors and layout are Tailwind classes inside the JSX.
-# shaishav-portfolio
+## Notes
+- Your LinkedIn and GitHub links are wired in `src/App.jsx`.
+- Resume button uses a Google Docs **export** URL to trigger an immediate download.
