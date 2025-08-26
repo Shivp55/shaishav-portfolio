@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 html { scroll-behavior: smooth; }
-:root { color-scheme: light dark; }
-body { @apply antialiased; }
+
+/* Subtle background for light mode */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply antialiased;
+}

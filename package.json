@@ -1,5 +1,5 @@
 {
-  "name": "shaishav-portfolio-3d",
+  "name": "shaishav-portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -12,10 +12,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "framer-motion": "^11.0.0",
-    "lucide-react": "^0.453.0",
-    "three": "^0.161.0",
-    "@react-three/fiber": "^8.15.19",
-    "@react-three/drei": "^9.101.3"
+    "lucide-react": "^0.453.0"
   },
   "devDependencies": {
     "vite": "^5.3.1",
