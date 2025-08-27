@@ -10,7 +10,7 @@ const DATA = {
   location: "Dublin, Ireland",
   email: "shaishavparekh23@gmail.com",
   phone: "+353899636097",
-  photo: "/profile.jpg",
+  photo: "public/profile.jpg",
   socials: [
     { label: "GitHub", href: "https://github.com/Shivp55", icon: Github },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/shaishav-parekh/", icon: Linkedin },
