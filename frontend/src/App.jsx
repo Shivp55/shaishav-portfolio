@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { API_BASE_URL } from "./config";
 import HomePage from "./components/HomePage";
 import ProjectsPage from "./components/ProjectsPage";
 import NavBar from "./components/NavBar";
@@ -8,8 +9,7 @@ function App() {
     const [profile, setProfile] = useState(null);
 
     useEffect(() => {
-        // Later we will switch this URL to the deployed backend
-        fetch("http://localhost:8080/api/profile")
+        fetch(`${API_BASE_URL}/api/profile`)
             .then((res) => res.json())
             .then((data) => setProfile(data))
             .catch((err) => console.error("Error fetching profile", err));
