@@ -21,7 +21,7 @@ export default function Hero({ profile }) {
                     LinkedIn
                 </a>
                 <a
-                    href="https://github.com/your-github-here"
+                    href="https://github.com/Shivp55"
                     target="_blank"
                     rel="noreferrer"
                     style={buttonOutlineStyle}
