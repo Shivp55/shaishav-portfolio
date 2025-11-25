@@ -10,8 +10,9 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = {
         "http://localhost:5173",
-        "https://shaishav-portfolio.onrender.com"
-}) // adjust if CRA (http://localhost:3000)
+        "https://shaishav-portfolio.onrender.com",
+        "https://shivp55.github.io"
+})
 public class ProfileController {
 
     @GetMapping("/api/profile")
