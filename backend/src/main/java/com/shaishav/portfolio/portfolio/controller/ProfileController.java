@@ -125,12 +125,48 @@ public class ProfileController {
         live3.setTechnologies(List.of("WordPress", "PHP"));
 
 
+// ---------------------- NEW PROJECTS ADDED ----------------------
+
+// Project 1: Flink Clickstream Anomaly Detection Pipeline
+        Project flinkAnomaly = new Project();
+        flinkAnomaly.setName("Flink Clickstream Anomaly Detection");
+        flinkAnomaly.setRole("Distributed Streaming System | FreeLance Project");
+        flinkAnomaly.setDescription(
+                "Built a real-time clickstream anomaly detection pipeline using Apache Flink and Kafka. " +
+                        "The system processes streaming user events, performs windowed aggregations, and flags abnormal behavior using a custom anomaly detector. " +
+                        "Packaged with Docker Compose to deploy a complete local cluster with Zookeeper, Kafka, JobManager, and TaskManager components."
+        );
+        flinkAnomaly.setTechnologies(List.of(
+                "Apache Flink", "Kafka", "Zookeeper", "Java", "Docker", "Streaming ETL"
+        ));
+        flinkAnomaly.setLink("https://github.com/Shivp55/flink-clickstream-anomaly-detection");
+
+
+// Project 2: Hadoop Clickstream Data Pipeline
+        Project hadoopPipeline = new Project();
+        hadoopPipeline.setName("Clickstream Hadoop Pipeline");
+        hadoopPipeline.setRole("Big Data Engineering | FreeLance Project");
+        hadoopPipeline.setDescription(
+                "Developed a scalable clickstream processing pipeline using the Hadoop ecosystem. " +
+                        "Implemented multi-zone HDFS storage (raw, clean, aggregated), built Hive external tables, and ran batch processing using MapReduce. " +
+                        "Designed for large-scale analytics, behavioral insights, and structured reporting over high-volume event logs."
+        );
+        hadoopPipeline.setTechnologies(List.of(
+                "HDFS", "Hive", "HiveQL", "MapReduce", "Bash", "Distributed ETL"
+        ));
+        hadoopPipeline.setLink("https://github.com/Shivp55/clickstream-hadoop-pipeline");
+
+
+// ----------------------------------------------------------------
+
+
+// Master's Project: Pedestrian Collision Detector
         Project pedestrian = new Project();
         pedestrian.setName("Pedestrian Collision System Detection for Cyclists");
         pedestrian.setRole("Master's Project - Image Processing and Analysis");
         pedestrian.setDescription(
-                "Built a deep learning model using TensorFlow for real-time detection. " +
-                        "Deployed with Flask API on AWS EC2 and integrated monitoring for uptime and latency using CloudWatch."
+                "Built a deep learning model using TensorFlow for real-time pedestrian detection. " +
+                        "Deployed with a Flask API on AWS EC2 and integrated monitoring for uptime and latency using CloudWatch."
         );
         pedestrian.setTechnologies(List.of("TensorFlow", "Python", "Flask", "AWS EC2", "CloudWatch"));
         pedestrian.setLink(null);
@@ -152,7 +188,28 @@ public class ProfileController {
         library.setTechnologies(List.of("HTML", "CSS", "JavaScript", "PHP", "MySQL", "Bootstrap"));
         library.setLink(null);
 
-        profile.setProjects(List.of(live1,live2, live3, pedestrian, internetBanking, library));
+
+        // Final portfolio list
+        profile.setProjects(List.of(
+                // 1) High-impact distributed systems & data engineering
+                flinkAnomaly,
+                hadoopPipeline,
+
+                // 2) AI / Machine Learning / Computer Vision
+                pedestrian,
+
+                // 3) Backend & secure systems
+                internetBanking,
+
+                // 4) Client projects (full stack)
+                live2,   // Nutrition Platform
+                live1,   // Accounting System
+
+                // 5) Web projects
+                live3,   // Pet Shop Website
+                library  // Library Management System
+        ));
+
 
         // education
         Education masters = new Education();
