@@ -91,7 +91,56 @@ public class ProfileController {
                 "Participated in daily Scrum meetings with distributed teams."
         ));
 
-        profile.setExperiences(List.of(greyslate, tatvasoft));
+// Freelance Experience
+        Experience freelance = new Experience();
+        freelance.setTitle("Freelance Software & Web Developer");
+        freelance.setCompany("Self-Employed");
+        freelance.setLocation("Remote");
+        freelance.setStartDate("Jun 2023");
+        freelance.setEndDate("Present");
+        freelance.setBulletPoints(List.of(
+                "Delivered backend-focused freelance projects using Java, Spring Boot, MySQL, and MongoDB.",
+                "Built secure REST APIs, optimized database workflows, and deployed production-ready services.",
+                "Developed Kafka–Flink anomaly detection pipeline and Hadoop-based batch analytics system.",
+                "Implemented CI/CD automation and microservice-based deployment patterns."
+        ));
+
+// Android Developer Intern
+        Experience android = new Experience();
+        android.setTitle("Android Developer Intern");
+        android.setCompany("BrainyBeam Technologies");
+        android.setLocation("Ahmedabad, Gujarat, India");
+        android.setStartDate("Dec 2021");
+        android.setEndDate("Feb 2022");
+        android.setBulletPoints(List.of(
+                "Designed and developed Android app features using Java and Android Studio.",
+                "Integrated RESTful APIs for real-time data and seamless app interactions.",
+                "Worked with Firebase Auth, Firestore, and Cloud Messaging for app functionality.",
+                "Optimized UI using Material Design, RecyclerViews, and XML layouts."
+        ));
+
+// Data Analyst Intern
+        Experience dataAnalyst = new Experience();
+        dataAnalyst.setTitle("Data Analyst Intern");
+        dataAnalyst.setCompany("Trainity");
+        dataAnalyst.setLocation("Remote");
+        dataAnalyst.setStartDate("Jan 2023");
+        dataAnalyst.setEndDate("Mar 2023");
+        dataAnalyst.setBulletPoints(List.of(
+                "Worked on end-to-end data analysis including cleaning, transformation, and validation.",
+                "Analyzed datasets using Python (Pandas, NumPy) to extract insights.",
+                "Built dashboards using Power BI and Excel for business reporting.",
+                "Wrote SQL queries to filter, aggregate, and analyze relational data."
+        ));
+
+// Add to profile
+        profile.setExperiences(List.of(
+                freelance,
+                greyslate,
+                tatvasoft,
+                android,
+                dataAnalyst
+        ));
 
         // projects
         Project live1 = new Project();
